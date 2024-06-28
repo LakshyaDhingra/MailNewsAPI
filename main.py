@@ -14,15 +14,13 @@ request = requests.get(url)
 
 # Generated dictionary with data
 content = request.json()
-
+message = "Subject : Daily NewsFlash" + "\n"
 # Access article titles and description
-message = ""
 for article in content["articles"][:20]:
     if article["title"] is not None:
-        message = "Subject : Daily NewsFlash" + "\n" \
-                  + message + article["title"] + "\n" \
+        message = message + article["title"] + "\n" \
                   + article["description"] + "\n" \
                   + article["url"] + 2*"\n"
 
-message = message.encode("utf-8")
-send_email.emailsend(message=message)
+encoded_message = message.encode("utf-8")
+send_email.emailsend(message=encoded_message)
