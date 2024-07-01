@@ -3,8 +3,9 @@ import send_email
 import os
 
 api_key = os.getenv("NEWS_API_EMAIL_KEY")
+topic = "Sports"
 url = f"https://newsapi.org/v2/everything?"\
-      "q=tesla&" \
+      f"q={topic}&" \
       "sortBy=publishedAt&" \
       f"apiKey={api_key}&"\
       "language=en"
