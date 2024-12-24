@@ -3,7 +3,7 @@ import streamlit as st
 import os
 
 # Prepare API key and API url
-api_key = os.getenv("IMAGE_OF_THE_DAY_API_KEY")
+api_key = os.getenv("IOTD_API_KEY")
 url = "https://api.nasa.gov/planetary/apod?" \
       f"api_key={api_key}"
 
