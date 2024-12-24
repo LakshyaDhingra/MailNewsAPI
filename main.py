@@ -3,7 +3,7 @@ import send_email
 import os
 
 api_key = os.getenv("NEWS_API_EMAIL_KEY")
-topic = "Sports"
+topic = "Ravish Kumar"
 url = "https://newsapi.org/v2/everything?"\
       f"q={topic}&" \
       "sortBy=publishedAt&" \
